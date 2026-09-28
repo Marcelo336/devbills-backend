@@ -1,0 +1,226 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: DevBills
+meta:
+  id: wrk_71f9d62696204dcb9f040ab13f2b71a6
+  created: 1785541895665
+  modified: 1785541895665
+  description: ""
+collection:
+  - url: "{{ _.url }}/categories"
+    name: 📁 GET - Categorias
+    meta:
+      id: req_e1679361b923471a90d9b7227f0b657a
+      created: 1785541895668
+      modified: 1787961017052
+      isPrivate: false
+      description: ""
+      sortKey: -1785541895668
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.url }}/users/info"
+    name: 👤 GET - User Info
+    meta:
+      id: req_c4d18a4b0ba449ebbccc9e87b43387e4
+      created: 1785541895669
+      modified: 1788232991775
+      isPrivate: false
+      description: ""
+      sortKey: -1785541895669
+    method: GET
+    headers:
+      - name: Authorization
+        value: Bearer
+          eyJhbGciOiJSUzI1NiIsImtpZCI6IjI0N2Y4MDYwMDM5YjVmNDBkOTQ5NjkzOGJiMTg5NzA2ZWY4ODkzM2QiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWFyY2VsbyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMQTUzNlZPNVJQSWJqQ0pIUUs4cDh2d2tSWTBpQXctZWY5bXpmUDM1RWhJMXc1NHc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZGV2YmlsbHMtMjcxZDgiLCJhdWQiOiJkZXZiaWxscy0yNzFkOCIsImF1dGhfdGltZSI6MTc4ODIxMTE2OCwidXNlcl9pZCI6IlZwV2hYU2hRNXBST2VVTlVQeFVCRVoydnd0VDIiLCJzdWIiOiJWcFdoWFNoUTVwUk9lVU5VUHhVQkVaMnZ3dFQyIiwiaWF0IjoxNzg4MjMyOTY3LCJleHAiOjE3ODgyMzY1NjcsImVtYWlsIjoibWFyY2Vsb3BpbnRpbm5hQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE3OTI1NzE1NTc5MDE1Nzc1MDkwIl0sImVtYWlsIjpbIm1hcmNlbG9waW50aW5uYUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.b5sqsbzzE74c2phXpAWlA6YgmOOO1qkOcKrgAjnoLMT7Wq-QGILHjhDU5WzUkvlqQlgHzVjo88-C23JY8-GJgNMYNwLM9hl8gSHwkydj8HckPSLoLWqeiBx5J-u1iOahwb0KDW77Zsbj5PcztnhURaETRZgkauJbTdkseV7k1Bz3U6TD27AfBUTBgFPjlraVNDF5uUY3eBH3NN-N1b3lIV9GcDYWmU4GAqJYI_2Z6LPZ8hNVfCymY55SDhT0CCt9uKZUFjPJQYQl6AlPqQPe_8omy3BVqj6JVvzxnf7OZjcxnhhkkUNA-X_fbS9vYNQT1IKEFmfuU4AWBoh4kqILrQ
+    authentication:
+      type: bearer
+      token: "{{ _.token }}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{_.url}}/transactions"
+    name: 💸 POST - Nova Transação
+    meta:
+      id: req_7acfaa82aff64a4b89b820c1198ad356
+      created: 1785541895671
+      modified: 1789573953185
+      isPrivate: false
+      description: ""
+      sortKey: -1785541895671
+    method: POST
+    body:
+      mimeType: application/json
+      text: |+
+        {
+          "description": "Celular",
+          "amount": 2100,
+          "date": "2026-09-11T00:00:00.000Z",
+          "categoryId": "6a6bbceeaad79ed7022b70df",
+          "type": "expense"
+        }
+
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: Authorization
+        value: Bearer
+          eyJhbGciOiJSUzI1NiIsImtpZCI6ImVjMjdhOWI2YWEzMDg4ZDI3Y2FkYjFjNjRmYTJmYTQ1Y2Y5ZmQ5ZTciLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWFyY2VsbyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMQTUzNlZPNVJQSWJqQ0pIUUs4cDh2d2tSWTBpQXctZWY5bXpmUDM1RWhJMXc1NHc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZGV2YmlsbHMtMjcxZDgiLCJhdWQiOiJkZXZiaWxscy0yNzFkOCIsImF1dGhfdGltZSI6MTc4ODIxMTE2OCwidXNlcl9pZCI6IlZwV2hYU2hRNXBST2VVTlVQeFVCRVoydnd0VDIiLCJzdWIiOiJWcFdoWFNoUTVwUk9lVU5VUHhVQkVaMnZ3dFQyIiwiaWF0IjoxNzg5NTczMDQyLCJleHAiOjE3ODk1NzY2NDIsImVtYWlsIjoibWFyY2Vsb3BpbnRpbm5hQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE3OTI1NzE1NTc5MDE1Nzc1MDkwIl0sImVtYWlsIjpbIm1hcmNlbG9waW50aW5uYUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.GuTTgbigd4tF7wKSmYTbR70U7iHYzIWvuhwVU6sARJEqLbnob--AV-Dan5tKjt3AdqN29OI1Zj2qV-1KRLt4ytAQZhoiSrGRRIdFBdOUM2l2UUQBZra0yGV6A1TB0GnvdhsRxbSeT_HRLEbAKtBs5yCK7hy4oMMilWNB0pAiEltYhbKif0zoR5thmykXWHrwZfb6hVlUebt2z_HlC26L5Ep54d-J_LBmyoghC9mC25rshQ_Srl5SmccLk9_mvS4Mw4su_IVeeIEiP2gdtGNmoGF3BNQmwNMo088zgQL7UNt2qTM6FViw0nlIUTC0y0mCSnrPv2fjpDBgMVVABZBYzw
+    authentication:
+      type: bearer
+      disabled: false
+      token: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.url }}/transactions"
+    name: 📜 GET - Lista de Transações
+    meta:
+      id: req_913a7574824c4135a10a1e36a05452d6
+      created: 1785541895673
+      modified: 1789573904944
+      isPrivate: false
+      description: ""
+      sortKey: -1785541895673
+    method: GET
+    parameters:
+      - name: year
+        value: "2026"
+        description: ""
+        disabled: false
+      - name: month
+        value: "09"
+        description: ""
+        disabled: false
+    headers:
+      - name: Authorization
+        value: Bearer
+          eyJhbGciOiJSUzI1NiIsImtpZCI6ImVjMjdhOWI2YWEzMDg4ZDI3Y2FkYjFjNjRmYTJmYTQ1Y2Y5ZmQ5ZTciLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWFyY2VsbyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMQTUzNlZPNVJQSWJqQ0pIUUs4cDh2d2tSWTBpQXctZWY5bXpmUDM1RWhJMXc1NHc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZGV2YmlsbHMtMjcxZDgiLCJhdWQiOiJkZXZiaWxscy0yNzFkOCIsImF1dGhfdGltZSI6MTc4ODIxMTE2OCwidXNlcl9pZCI6IlZwV2hYU2hRNXBST2VVTlVQeFVCRVoydnd0VDIiLCJzdWIiOiJWcFdoWFNoUTVwUk9lVU5VUHhVQkVaMnZ3dFQyIiwiaWF0IjoxNzg5NTczMDQyLCJleHAiOjE3ODk1NzY2NDIsImVtYWlsIjoibWFyY2Vsb3BpbnRpbm5hQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE3OTI1NzE1NTc5MDE1Nzc1MDkwIl0sImVtYWlsIjpbIm1hcmNlbG9waW50aW5uYUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.GuTTgbigd4tF7wKSmYTbR70U7iHYzIWvuhwVU6sARJEqLbnob--AV-Dan5tKjt3AdqN29OI1Zj2qV-1KRLt4ytAQZhoiSrGRRIdFBdOUM2l2UUQBZra0yGV6A1TB0GnvdhsRxbSeT_HRLEbAKtBs5yCK7hy4oMMilWNB0pAiEltYhbKif0zoR5thmykXWHrwZfb6hVlUebt2z_HlC26L5Ep54d-J_LBmyoghC9mC25rshQ_Srl5SmccLk9_mvS4Mw4su_IVeeIEiP2gdtGNmoGF3BNQmwNMo088zgQL7UNt2qTM6FViw0nlIUTC0y0mCSnrPv2fjpDBgMVVABZBYzw
+    authentication:
+      type: bearer
+      disabled: false
+      token: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.url }}/transactions/6a9646394068b5e1a0161e6e"
+    name: 🗑️ DELETE - Excluir Transação
+    meta:
+      id: req_aaea680e3c674b4ba3cbd34604858834
+      created: 1785541895674
+      modified: 1789097212791
+      isPrivate: false
+      description: ""
+      sortKey: -1785541895674
+    method: DELETE
+    headers:
+      - name: Authorization
+        value: Bearer
+          eyJhbGciOiJSUzI1NiIsImtpZCI6IjY2MmQ3YTBkNGVlZmQzNDMyNjFjYWRkZmZhZWM2MjNkYzZjYTlmZjAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWFyY2VsbyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMQTUzNlZPNVJQSWJqQ0pIUUs4cDh2d2tSWTBpQXctZWY5bXpmUDM1RWhJMXc1NHc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZGV2YmlsbHMtMjcxZDgiLCJhdWQiOiJkZXZiaWxscy0yNzFkOCIsImF1dGhfdGltZSI6MTc4ODIxMTE2OCwidXNlcl9pZCI6IlZwV2hYU2hRNXBST2VVTlVQeFVCRVoydnd0VDIiLCJzdWIiOiJWcFdoWFNoUTVwUk9lVU5VUHhVQkVaMnZ3dFQyIiwiaWF0IjoxNzg5MDk1MTk4LCJleHAiOjE3ODkwOTg3OTgsImVtYWlsIjoibWFyY2Vsb3BpbnRpbm5hQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE3OTI1NzE1NTc5MDE1Nzc1MDkwIl0sImVtYWlsIjpbIm1hcmNlbG9waW50aW5uYUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.Dr8p175agH8L7djKh3AgcX_iif8a-4TzOZJFOMkgyYp8FRjydj3mfzTArC4XeRyC1Pic36BrukjlEiKUB1hPAzU_w8tOGmnlgybxEjY6vbscdi7fKVwROxXZ8DadQebiXzBqY5PwJdRtJ_biE5Yy97716oIK6WA_TRpvT-mj_Gcs2EwCruE9Ikhb6vW4eH8YivqgaSW54J3VTtalEFjmW-KN8IIAUvumQ1ksk98Oeu5Brh6vz7ZxzL-Tl7nwyEE_gTtWItJVYWnG63PLKzAfUL2Beg2V_zxb_kry902H2c1XDvmiK8Prhv4QoR9C02EKVqH6TJ-ujUSRP2FK5G--MQ
+    authentication:
+      type: bearer
+      token: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.url }}/transactions/summary"
+    name: 📊 GET - Resumo de Transações
+    meta:
+      id: req_84b07e475bc84f3ba7868575686b8b06
+      created: 1785541895676
+      modified: 1789573933288
+      isPrivate: false
+      description: ""
+      sortKey: -1785541895673.5
+    method: GET
+    parameters:
+      - name: year
+        value: "2026"
+        description: ""
+        disabled: false
+      - name: month
+        value: "9"
+        description: ""
+        disabled: false
+    headers:
+      - name: Authorization
+        value: Bearer
+          eyJhbGciOiJSUzI1NiIsImtpZCI6ImVjMjdhOWI2YWEzMDg4ZDI3Y2FkYjFjNjRmYTJmYTQ1Y2Y5ZmQ5ZTciLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWFyY2VsbyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMQTUzNlZPNVJQSWJqQ0pIUUs4cDh2d2tSWTBpQXctZWY5bXpmUDM1RWhJMXc1NHc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZGV2YmlsbHMtMjcxZDgiLCJhdWQiOiJkZXZiaWxscy0yNzFkOCIsImF1dGhfdGltZSI6MTc4ODIxMTE2OCwidXNlcl9pZCI6IlZwV2hYU2hRNXBST2VVTlVQeFVCRVoydnd0VDIiLCJzdWIiOiJWcFdoWFNoUTVwUk9lVU5VUHhVQkVaMnZ3dFQyIiwiaWF0IjoxNzg5NTczMDQyLCJleHAiOjE3ODk1NzY2NDIsImVtYWlsIjoibWFyY2Vsb3BpbnRpbm5hQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE3OTI1NzE1NTc5MDE1Nzc1MDkwIl0sImVtYWlsIjpbIm1hcmNlbG9waW50aW5uYUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.GuTTgbigd4tF7wKSmYTbR70U7iHYzIWvuhwVU6sARJEqLbnob--AV-Dan5tKjt3AdqN29OI1Zj2qV-1KRLt4ytAQZhoiSrGRRIdFBdOUM2l2UUQBZra0yGV6A1TB0GnvdhsRxbSeT_HRLEbAKtBs5yCK7hy4oMMilWNB0pAiEltYhbKif0zoR5thmykXWHrwZfb6hVlUebt2z_HlC26L5Ep54d-J_LBmyoghC9mC25rshQ_Srl5SmccLk9_mvS4Mw4su_IVeeIEiP2gdtGNmoGF3BNQmwNMo088zgQL7UNt2qTM6FViw0nlIUTC0y0mCSnrPv2fjpDBgMVVABZBYzw
+    authentication:
+      type: bearer
+      token: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.url }}/transactions/historical?year=2026&month=9"
+    name: 📊 GET - Histórico de Transações
+    meta:
+      id: req_92e5eacbcf93482793d7ad4eac7b547a
+      created: 1789321479406
+      modified: 1789576896421
+      isPrivate: false
+      description: ""
+      sortKey: -1785541895673.25
+    method: GET
+    headers:
+      - name: Authorization
+        value: Bearer
+          eyJhbGciOiJSUzI1NiIsImtpZCI6ImVjMjdhOWI2YWEzMDg4ZDI3Y2FkYjFjNjRmYTJmYTQ1Y2Y5ZmQ5ZTciLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTWFyY2VsbyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMQTUzNlZPNVJQSWJqQ0pIUUs4cDh2d2tSWTBpQXctZWY5bXpmUDM1RWhJMXc1NHc9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZGV2YmlsbHMtMjcxZDgiLCJhdWQiOiJkZXZiaWxscy0yNzFkOCIsImF1dGhfdGltZSI6MTc4ODIxMTE2OCwidXNlcl9pZCI6IlZwV2hYU2hRNXBST2VVTlVQeFVCRVoydnd0VDIiLCJzdWIiOiJWcFdoWFNoUTVwUk9lVU5VUHhVQkVaMnZ3dFQyIiwiaWF0IjoxNzg5NTc2OTQ4LCJleHAiOjE3ODk1ODA1NDgsImVtYWlsIjoibWFyY2Vsb3BpbnRpbm5hQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7Imdvb2dsZS5jb20iOlsiMTE3OTI1NzE1NTc5MDE1Nzc1MDkwIl0sImVtYWlsIjpbIm1hcmNlbG9waW50aW5uYUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.XWsMD_v_ifVARaARDEgMRGH0gBebHBTNKgSRYZdJbIPKeZ2d17SqVXw_yITq-EEjD4759x0sA_qoXQE2B4Ee-A3Xt8c6_Wtsb1lAnCfK-LJmtyAoJR4z40RkOb5ApEplBj11Q0StYgfX8TcLPU1j8seuf9401Hkm2rLNyY3bfvN3PwARNIdHoNXunzLZHveqi-77xtFv9ZoWsHnfdK20JKEP7_2kEDLP_sUI1kluJoWI640BpZ8jFdnQq6XiX9GabFdkvVkkvWNnYmKa2oFpK4Udnhx58WbxT8n_TUFOnxEs2fNkPn03RZS4XqXquneFtItRgjCHct9qL1FP0EKUOw
+    authentication:
+      type: bearer
+      token: ""
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_9262b040acb499c43f11de3f31ae2469bfe7ebb4
+    created: 1785541895792
+    modified: 1785541895792
+environments:
+  name: Base Environment
+  meta:
+    id: env_560ec58a1fac4c8cb97d90038793c3b6
+    created: 1680000000001
+    modified: 1785541895667
+    isPrivate: false
+  data:
+    base_url: http://localhost:3333/api
+    token: <COLE_SEU_TOKEN_AQUI>
