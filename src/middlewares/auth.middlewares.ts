@@ -1,6 +1,6 @@
 // src/middlewares/auth.middleware.ts
 import { FastifyReply, FastifyRequest } from "fastify";
-import { firebaseAuthService } from '../config/firebase.js';
+import { firebaseAuthService } from '../config/firebase';
 
 declare module "fastify" {
   interface FastifyRequest {

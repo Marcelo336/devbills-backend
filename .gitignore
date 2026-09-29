@@ -15,4 +15,3 @@ dist-ssr
 *.local
 .env
 /generated/prisma
-src/config
