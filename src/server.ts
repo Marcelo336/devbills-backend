@@ -1,8 +1,8 @@
-import app from "./app.js";
-import { env } from "./config/env.js"; 
-import initializeFirebaseAdmin from "./config/firebase.js";
-import { prismaConnect } from "./config/prisma.js";
-import { initializeGlobalCategories } from "./services/globalCategories.service.js";
+import app from "./app";
+import { env } from "./config/env"; 
+import initializeFirebaseAdmin from "./config/firebase";
+import { prismaConnect } from "./config/prisma";
+import { initializeGlobalCategories } from "./services/globalCategories.service";
 
 const PORT = env.PORT;
 

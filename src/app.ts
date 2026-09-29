@@ -1,8 +1,8 @@
 import cors from "@fastify/cors"; 
 import Fastify from "fastify";
 import type { FastifyInstance } from "fastify";
-import { env } from "./config/env.js";
-import routes from "./routes/index.js";
+import { env } from "./config/env";
+import routes from "./routes/index";
 
 const app: FastifyInstance = Fastify({
   logger: {

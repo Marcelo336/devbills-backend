@@ -1,12 +1,12 @@
 // src/controllers/transactions/getTransactionsSummary.controller.ts
 import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc.js";
+import utc from "dayjs/plugin/utc";
 import type { FastifyRequest, FastifyReply } from "fastify";
-import prisma from "../../config/prisma.js";
-import { GetTransactionSummaryQuery } from "../../schemas/transaction.schema.js";
-import { CategorySummary } from "../../types/category.types.js";
+import prisma from "../../config/prisma";
+import { GetTransactionSummaryQuery } from "../../schemas/transaction.schema";
+import { CategorySummary } from "../../types/category.types";
 import { TransactionType } from "@prisma/client";
-import { TransactionSummary } from "../../types/transaction.types.js";
+import { TransactionSummary } from "../../types/transaction.types";
 dayjs.extend(utc);
 
 export const getTransactionsSummary = async (

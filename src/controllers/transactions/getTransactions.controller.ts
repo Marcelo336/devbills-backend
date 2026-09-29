@@ -1,10 +1,10 @@
 import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc.js";
-import prisma from "../../config/prisma.js";
+import utc from "dayjs/plugin/utc";
+import prisma from "../../config/prisma";
 import type { FastifyReply, FastifyRequest } from "fastify";
 
-import type { GetTransactionsQuery } from "../../schemas/transaction.schema.js";
-import type { TransactionFilter } from "../../types/transaction.types.js";
+import type { GetTransactionsQuery } from "../../schemas/transaction.schema";
+import type { TransactionFilter } from "../../types/transaction.types";
 
 dayjs.extend(utc);
 
