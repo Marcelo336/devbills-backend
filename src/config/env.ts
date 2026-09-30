@@ -10,17 +10,16 @@ const envSchema = z.object({
     message: "O NODE ENV deve ser dev, test ou prod",
   }),
 
-  FIREBASE_PROJECT_ID: z.string().optional(),
-  FIREBASE_PRIVATE_KEY: z.string().optional(),
-  FIREBASE_CLIENT_EMAIL: z.string().optional(),
+  FIREBASE_PROJECT_ID: z.string(),
+  FIREBASE_PRIVATE_KEY: z.string(),
+  FIREBASE_CLIENT_EMAIL: z.string(),
 
 });
 
 const _env = envSchema.safeParse(process.env);
 
 if (!_env.success){
-  console.error("Variáveis de ambiente Inválidas");
+  console.error("Variáveis de ambiente Inválidas", _env.error.format());
   process.exit(1);
 }
-
 export const env = _env.data;
