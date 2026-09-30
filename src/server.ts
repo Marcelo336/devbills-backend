@@ -19,7 +19,10 @@ const startServer = async () => {
     console.log("4 - Categorias inicializadas!");
 
     console.log("5 - Iniciando servidor...");
-    await app.listen({ port: PORT });
+    await app.listen({ 
+      port: PORT,
+      host: '0.0.0.0',
+    });
     console.log(`Servidor rodando na porta ${PORT}`);
   } catch (err) {
     console.error("ERRO AO INICIAR SERVIDOR:", err);
