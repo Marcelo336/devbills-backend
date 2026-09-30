@@ -21,7 +21,8 @@
     "firebase-admin": "^14.3.0",
     "mongodb": "^7.5.0",
     "zod": "^4.4.3",
-    "zod-to-json-schema": "^3.25.2"
+    "zod-to-json-schema": "^3.25.2",
+    "dotenv": "^17.4.2"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.2",
